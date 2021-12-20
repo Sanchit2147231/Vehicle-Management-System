@@ -1,0 +1,139 @@
+body {
+ 
+  font-size: 16px;
+  line-height: 30px;
+  background-image: linear-gradient(to right, #DA4453 , #89216B);
+  overflow-x:hidden;
+  color: white;
+  }
+
+
+
+.carousel-caption{
+  bottom: 130px;
+}
+.carousel-caption h5{
+  font-family: poppins;
+  font-size: 60px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+
+}
+
+.carousel-caption p{
+    font-size: 18px;
+    margin: auto;
+    width: 60%;
+    margin-bottom: 20px;
+}
+.carousel-caption a{
+
+    text-transform: uppercase;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 15px;
+    width: 100px;
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px){
+  .carousel-caption h5{
+  font-family: poppins;
+  font-size: 35px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+
+}
+
+  .carousel-caption p{
+    font-size: 14px;
+    margin: auto;
+    width: 40%;
+    margin-bottom: 10px;
+  }
+  .carousel-caption a{
+
+    text-transform: uppercase;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 12px;
+    width: 80px;
+
+}
+
+}
+@media only screen and (max-width: 767px){
+  .carousel-caption h5{
+  font-family: poppins;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+
+}
+
+  .carousel-caption p{
+    font-size: 10px;
+    margin: auto;
+    width: 40%;
+    margin-bottom: 10px;
+  }
+  .carousel-caption a{
+
+    text-transform: uppercase;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    font-size: 10px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 12px;
+    width: 80px;
+
+}
+
+}
+
+.about h1{
+  text-transform: uppercase;
+  text-align: center;
+  font-family: poppins;
+  font-weight: 600;
+  color: white;
+  font-size: 35px;
+  margin-top: 105px;
+  margin-bottom: 30px;
+}
+.about p{
+  /*background-color: #283245;*/
+  color: white;
+  text-align: center;
+  width: 70%;
+  margin: auto;
+  justify-content: center;
+  padding: 40px;
+  border: 1px solid white;
+  border-radius: 10px;
+
+}
+.aboutcover{
+    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+ }
