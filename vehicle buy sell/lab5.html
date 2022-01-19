@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Management System</title>
+    <style>
+        h1{
+            align-items: center;
+            text-align: center;
+            background-color: #141d70;
+            font-family: poppins;
+            text-transform: uppercase;
+            font-size: 25px;
+            color: white;
+            padding: 5px;
+            margin-top: 0;
+        }
+        button{
+            width: 150px;
+            height: 40px;            
+            background-color: #141d70;
+            border-radius: 10px;
+            color: white;
+            font-family: poppins;
+
+
+        }
+        button:hover{
+            background-color: black;
+            color: white;
+            cursor: pointer;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <h1>Vehicle Inventory</h1>
+    <p><button onclick="loadxmldoc()">SHOW TABLE</button></p>
+
+    <table id="stocks" border="1">
+        <tr>
+            <th>Model</th>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Price</th>
+        </tr>
+    </table>
+
+    <script>
+        function loadxmldoc(){
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function(){
+                if (this.readyState == 4 && this.status == 200){
+                    myFunction(this);
+                }
+            };
+            xmlhttp.open("GET","stock.xml",true);
+            xmlhttp.send();
+        }
+        function myFunction(xml){
+            var x, i, xmlDoc, table;
+            xmlDoc = xml.responseXML;
+            table = "<tr><th>vcle_model</th><th>vcle_name</th><th><vcle_type></th><th><vcle_price></th></tr>";
+            x = xmlDoc.getElementsByTagName("course")
+            for (i = 0; i < x.length; i++){
+                table += "<tr><td>"+
+                    x[i].getElementsByTagName("vcle_model")[0].childNodes[0].nodeValue + "</td><td>"+ 
+                    x[i].getElementsByTagName("vcle_name")[0].childNodes[0].nodeValue + "</td></tr>" +
+                    x[i].getElementsByTagName("vcle_type")[0].childNodes[0].nodeValue + "</td></tr>"+
+                    x[i].getElementsByTagName("vcle_price")[0].childNodes[0].nodeValue + "</td></tr>";                    
+            }
+            document.getElementById("stocks").innerHTML = table;
+        }
+    </script>
+</body>
+</html>

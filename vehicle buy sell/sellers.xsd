@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+targetNamespace="https://www.w3schools.com"
+xmlns="https://www.w3schools.com"
+elementFormDefault="qualified">
+
+<xs:element name="selling">
+  <xs:element name="seller">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="seller_name" type="xs:string"/>
+      <xs:element name="seller_type" type="xs:string"/>
+      <xs:element name="seller_no" type="xs:integer"/>      
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+</xs:schema>

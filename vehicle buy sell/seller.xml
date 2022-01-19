@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="sellers.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<?xml-stylesheet href="sellers.xsl" type="text/xsl"?>
+<selling>
+    <seller id="01">
+        <seller_name>VCA2</seller_name>
+        <seller_no>XY123</seller_no>
+        <seller_type>2 Wheeler</seller_type>
+    </seller>
+    <seller id="02">
+        <seller_name>X750</seller_name>
+        <seller_no>XY122</seller_no>
+        <seller_type>4 Wheeler</seller_type>
+    </seller>
+    <seller id="03">
+        <seller_name>Y4ZX</seller_name>
+        <seller_no>XY423</seller_no>
+        <seller_type>2 Wheeler</seller_type>
+    </seller>
+    <seller id="04">
+        <seller_name>VSX4</seller_name>
+        <seller_no>XY111</seller_no>
+        <seller_type>4 Wheeler</seller_type>
+    </seller>
+    <seller id="05">
+        <seller_name>ZMR</seller_name>
+        <seller_no>XY155</seller_no>
+        <seller_type>4 Wheeler</seller_type>
+    </seller>
+    <seller id="06">
+        <seller_name>940D</seller_name>
+        <seller_no>XY124</seller_no>
+        <seller_type>4 Wheeler</seller_type>
+    </seller>
+    <seller id="07">
+        <seller_name>54HG</seller_name>
+        <seller_no>XY135</seller_no>
+        <seller_type>2 Wheeler</seller_type>
+    </seller>
+    <seller id="08">
+        <seller_name>EV22</seller_name>
+        <seller_no>XY545</seller_no>
+        <seller_type>4 Wheeler</seller_type>
+    </seller>
+</selling>
