@@ -10,7 +10,7 @@
                     padding: 0;
                 }
                 body{
-                    background-color: #f9f9f9;
+                    background-color: #f9f9f9;1
                     font-family: 'Montserrat';
                 }
                 h1{
