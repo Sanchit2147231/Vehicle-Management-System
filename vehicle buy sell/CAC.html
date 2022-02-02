@@ -40,7 +40,7 @@
       <p>
          Password:
       <div id="password">
-         <input name="fpassword" type="password" id="password" class="formitem" required>
+         <input name="fpassword" type="password" id="password1" class="formitem" required>
          <i class="bi bi-eye-slash" id="togglePassword"></i>
          <br><b><span class="formerror" style="color:red"></span></b>
       </div>
@@ -115,7 +115,7 @@
          padding-top: 2px;
          padding-left: 12px;
          padding-right: 12px;
-         margin-left: 1%;
+         margin-left: 5%;
          }
          #name input[type=text], textarea{
          -webkit-transition: all 0.30s ease-in-out;
@@ -172,13 +172,13 @@
          -o-transition: all 0.30s ease-in-out;
          outline: none;
          padding: 3px 0px 3px 3px;
-         margin: 5px 1px 3px 0px;
+         margin: 5px 1px 3px 70px;
          border: 1px solid #DDDDDD;
          }
          #password input[type=password]:focus{
          box-shadow: 0 0 5px rgba(81, 203, 238, 1);
          padding: 3px 0px 3px 13px;
-         margin: 5px 1px 3px 0px;
+         margin: 5px 1px 3px 70px;
          border: 1px solid rgba(81, 203, 238, 1);
          }
          li{
@@ -203,10 +203,10 @@
          }
       </style>
       <script>
-         document.getElementById("password").style.marginLeft = "3.7%"; 
-         document.getElementById("password").style.paddingLeft = "12px";
+         document.getElementById("password1").style.marginLeft = "3.7%"; 
+         document.getElementById("password1").style.paddingLeft = "12px";
                const togglePassword = document.querySelector("#togglePassword");
-               const password = document.querySelector("#password");         
+               const password = document.querySelector("#password1");         
                togglePassword.addEventListener("click", function () {
                    // toggle the type attribute
                    const type = password.getAttribute("type") === "password" ? "text" : "password";
