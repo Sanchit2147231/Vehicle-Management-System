@@ -1,0 +1,14 @@
+{
+    "Managers":[
+{"name":"Ferrari","no":1234566, "address":"Bannerghatta Road", "mileage":23, "seller":"Woods, Citadel", "price":6700},
+{"name":"Ferrari","no":1234566, "address":"JP Nagar", "mileage":27, "seller":"Deepa, Citadel", "price":1200},
+{"name":"Ferrari","no":1234566, "address":"JP Nagar", "mileage":33, "seller":"Paradise, Song", "price":1950},
+{"name":"Ferrari","no":1234566, "address":"Bannerghatta", "mileage":41, "seller":"Woods, Song", "price":3400},
+{"name":"Ferrari","no":1234566, "address":"Hosur Road", "mileage":24, "seller":"Citadel, Song", "price":3750},
+{"name":"Ferrari","no":1234566, "address":"Gottigere", "mileage":23, "seller":"Paradise, Prestige", "price":2800},
+{"name":"Ferrari","no":1234566, "address":"Indiranagar", "mileage":27, "seller":"Song, Prestige", "price":3700},
+{"name":"Ferrari","no":1234566, "address":"Majestic", "mileage":25, "seller":"Woods, Prestige", "price":2900}
+]
+}
+
+
