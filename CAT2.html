@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>TECHNOVID</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat+Subrayada&family=Russo+One&display=swap" rel="stylesheet">
+</head>
+<style>
+	
+</style>
+<body>
+<div style="text-align: center;">
+	<p style="font-family:poppins; letter-spacing: 7.5px; margin-top: 40px; margin-bottom:-40px">GATEWAYS 2022 PRESENTS</p>
+	<h1 style="font-family: Russo One, sans-serif;  font-size:55px; letter-spacing:5px; margin-bottom:-20px">TECHNOVID</h1>
+	<p style="font-family:poppins; letter-spacing: 4.5px; font-size:20px; font-weight:600">REGISTRATTION FORM</p>
+	<hr>
+</div>
+<div class="container" ></div>
+<form style="text-align:center" action="#" name="myForm" onsubmit= "return  validateForm()" method="post">
+	<div class="column" style="float: left; width: 50%; margin-top: 15px;">
+	<div id="name">
+         <input name="fname" type="text" onkeypress="return lockkb(event)" class="formitem" placeholder="Name" required>
+         <br><b><span class="formerror" style="color:red"></span></b>
+     </div>
+     <div id="email">
+         <input name="femail" type="email"id="email" class="formitem" placeholder="University email" required>
+         <br><b><span class="formerror" style="color:red"></span></b>
+      </div> 
+      <div id="state">
+         <input name="fstate" type="text" onkeypress="return lockkb(event)" class="formitem"  placeholder="State" required>
+         <br><b><span class="formerror" style="color:red"></span></b>
+     </div>       
+     <div id="university">
+         <input name="funiversity" type="text" onkeypress="return lockkb(event)" class="formitem" placeholder="University Name" required>
+         <br><b><span class="formerror" style="color:red"></span></b>
+     </div>
+     <div id="branch">
+         <input name="fbranch" type="text" onkeypress="return lockkb(event)" placeholder="University Branch" class="formitem" required>
+         <br><b><span class="formerror" style="color:red"></span></b>
+     </div> 
+     <input  style="width:20%; background-color:transparent; color: white; border-width: 2px; " id= "button" type="reset" value="Reset" onClick="window.location.reload();"> 
+     </div>
+     <div class="column"style="float: right; width: 50%; margin-top:15px;">
+     <div id="address">
+         <input name="faddress" type="text" onkeypress="return lockkb(event)" class="formitem" placeholder="Address" required>
+         <br><b><span class="formerror" style="color:red"></span></b>
+     </div> 
+     <div id="age">
+         <input name="fage" type="number" placeholder="Age" class="formitem" required>
+         <br><b><span class="formerror" style="color:red"></span></b>
+     </div> 
+     <div id="phone">
+         <input name="fphone" type="number" placeholder="Phone no" class="formitem" required>
+         <br><b><span class="formerror" style="color:red"></span></b>
+     </div>    
+     
+     <div id="user">
+         <input name="fuser" type="text" class="formitem" placeholder="Username"  required>
+         <br><b><span class="formerror" style="color:red"></span></b>
+     </div>
+     <div id="password">
+         <input name="fpassword" type="password" id="password1" placeholder="Password" class="formitem" required>
+         <i class="bi bi-eye-slash" id="togglePassword"></i>
+         <br><b><span class="formerror" style="color:red"></span></b>
+      </div>
+      <input style="width:20%; background-color:transparent; color: white; border-width: 2px; " id= "button" type="submit" value="Submit" class="formitem">
+      </div>
+      
+</form>
+</body>
+<style>
+	body{
+		background-image: linear-gradient(to right, #0d324d, #7f5a83 );
+		color: white;
+	}
+	input{
+		width: 90%;
+		height: 40px;
+		margin: 20px 0px 10px 0px;
+		border-radius:  5px;
+		border-width: 1px;
+		padding: 1px 10px 1px 10px;		
+		border: 1px solid #DDDDDD;
+	}
+</style>
+<script>
+       function clearErrors()
+{
+    errors = document.getElementsByClassName('formerror');
+    for(let item of errors)
+    {
+        item.innerHTML = "";
+    }
+}
+function seterror(id,error)
+{
+    element = document.getElementById(id);
+    element.getElementsByClassName('formerror')[0].innerHTML = error;
+}
+function validateForm()
+{
+    var returnVal = true;
+    clearErrors();
+
+    var name = document.forms['myForm']['fname'].value;
+    if(name.length < 5){
+        seterror("name","*Length of name is too short");
+        returnVal = false;
+    }
+    var state = document.forms['myForm']['fstate'].value;
+    if(state.length < 5){
+        seterror("name","*Length of name is too short");
+        returnVal = false;
+    }
+    var university = document.forms['myForm']['funiversity'].value;
+    if(university.length < 5){
+        seterror("name","*Length of name is too short");
+        returnVal = false;
+    }
+    var branch = document.forms['myForm']['fbranch'].value;
+    if(branch.length < 5){
+        seterror("name","*Length of name is too short");
+        returnVal = false;
+    }
+
+    var email = document.forms['myForm']['femail'].value;
+    if(email.length > 30){
+        seterror("email","*Length of email is too long");
+        returnVal = false;
+    }
+    if(email.search(/([a-z0-9\.\-_]{5,25})@christuniversity.in$/)<0){
+        seterror("email","*Domain name should only be christuniversity.in");
+        returnVal = false;
+    }
+    var age = document.forms['myForm']['fage'].value;
+    if(age.length = 0){
+        seterror("phone","*Enter your correct age");
+        returnVal = false;
+    }
+    var age = document.forms['myForm']['fage'].value;
+    if(age.length < 0){
+        seterror("phone","**Enter your correct age");
+        returnVal = false;
+    }
+    var phone = document.forms['myForm']['fphone'].value;
+    if(phone.length != 10){
+        seterror("phone","*Length of phone should be 10");
+        returnVal = false;
+    }
+    var password = document.forms['myForm']['fpassword'].value;
+    if (password.length < 8) {
+        seterror("password","*Your password must be at least 8 characters");
+        returnVal = false;
+    }
+    if (password.search(/[a-z]/) < 0) {
+        seterror("password","*Your password must contain at least one letter in lower case.");
+        returnVal = false;
+    }
+    if (password.search(/[A-Z]/) < 0) {
+        seterror("password","*Your password must contain at least one letter in upper case.");
+        returnVal = false;
+    }
+    if (password.search(/[0-9]/) < 0) {
+        seterror("password","*Your password must contain at least one digit.");
+        returnVal = false;
+    }
+    if (password.search(/[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/) < 0) {
+        seterror("password","*Your password must contain at least one Special Character.");
+        returnVal = false;
+    }
+
+    return returnVal;
+}
+function lockkb(event)
+{
+	let code=event.which;
+	if(code>47 && code<58)
+		return false;
+	else
+		return true;
+}
+    </script>  
+</html>
