@@ -110,22 +110,6 @@ function validateForm()
         seterror("name","*Length of name is too short");
         returnVal = false;
     }
-    var state = document.forms['myForm']['fstate'].value;
-    if(state.length < 5){
-        seterror("name","*Length of name is too short");
-        returnVal = false;
-    }
-    var university = document.forms['myForm']['funiversity'].value;
-    if(university.length < 5){
-        seterror("name","*Length of name is too short");
-        returnVal = false;
-    }
-    var branch = document.forms['myForm']['fbranch'].value;
-    if(branch.length < 5){
-        seterror("name","*Length of name is too short");
-        returnVal = false;
-    }
-
     var email = document.forms['myForm']['femail'].value;
     if(email.length > 30){
         seterror("email","*Length of email is too long");
@@ -135,16 +119,26 @@ function validateForm()
         seterror("email","*Domain name should only be christuniversity.in");
         returnVal = false;
     }
-    var age = document.forms['myForm']['fage'].value;
-    if(age.length = 0){
-        seterror("phone","*Enter your correct age");
+    var state = document.forms['myForm']['fstate'].value;
+    if(state.length < 5){
+        seterror("state","*Length of name is too short");
         returnVal = false;
     }
-    var age = document.forms['myForm']['fage'].value;
-    if(age.length < 0){
-        seterror("phone","**Enter your correct age");
+    var university = document.forms['myForm']['funiversity'].value;
+    if(university.length < 5){
+        seterror("university","*Length of name is too short");
         returnVal = false;
     }
+    var branch = document.forms['myForm']['fbranch'].value;
+    if(branch.length < 5){
+        seterror("branch","*Length of name is too short");
+        returnVal = false;
+    }    
+    var age = document.forms['myForm']['fage'].value;
+    if(age.search(/[^-\d+$]/)){
+        seterror("age","*Enter your correct age");
+        returnVal = false;
+    }    
     var phone = document.forms['myForm']['fphone'].value;
     if(phone.length != 10){
         seterror("phone","*Length of phone should be 10");
@@ -182,5 +176,68 @@ function lockkb(event)
 	else
 		return true;
 }
+function setUsername()
+        {
+            var value = document.getElementById("username").value;
+            
+                document.cookie="username="+value+";expires=Fri,2 Feb 2022 01:00:00 UTC;";
+        }
+        function setEmail()
+        {
+            var value = document.getElementById("email").value;
+            
+                document.cookie="email="+value+";expires=Fri,2 Feb 2022 01:00:00 UTC;";
+        }
+        function storeItems()
+        {
+            var myphone = document.getElementById("phone").value;
+            localStorage.setItem("phone",myphone);
+            var myemail = document.getElementById("email").value;
+            localStorage.setItem("email",myphone);
+        }
+
+        function loadXMLDoc() {
+            // XMLHttpRequest() - to load an XML documents (request data from the server)
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () {
+  
+                // Request finished and response 
+                // is ready and Status is "OK"
+                if (this.readyState == 4 && this.status == 200) {
+                    studentDetails(this);
+                }
+            };
+            // registration.xml is the external xml file
+            xmlhttp.open("GET", "registration.xml", true);
+            xmlhttp.send();
+        }
+        function studentDetails(xml) {
+            var i;
+            var xmlDoc = xml.responseXML;
+            var table = 
+                `<tr>
+                    <th>Name</th>
+                    <th>University</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                </tr>`;
+                
+            var x = xmlDoc.getElementsByTagName("computer-science");
+            
+  
+            // Start to fetch the data by using TagName 
+            for (i = 0; i < x.length; i++) {
+                table += "<tr><td>" +
+                    x[i].getElementsByTagName("stu-name")[0]
+                    .childNodes[0].nodeValue + "</td><td>" +
+                    x[i].getElementsByTagName("stu-university")[0]
+                    .childNodes[0].nodeValue + "</td><td>" +
+                    x[i].getElementsByTagName("stu-phone")[0]
+                    .childNodes[0].nodeValue + "</td><td>" +
+                    x[i].getElementsByTagName("stu-email")[0]
+                    .childNodes[0].nodeValue + "</td><td>";
+            }
+            // Print the xml data in table form
+            document.getElementById("id").innerHTML = table;
     </script>  
 </html>
