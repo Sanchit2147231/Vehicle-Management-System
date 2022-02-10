@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<christ>
+    <computer-science>
+        <stu-name>Sanchit</stu-name>
+        <stu-university>Christ</stu-university>
+        <stu-phone>9873847384</stu-phone>
+        <stu-email>sanchit@christuniversity.in</stu-email>
+    </computer-science>
+    <computer-science>
+        <stu-name>Shruti</stu-name>
+        <stu-university>Christ</stu-university>
+        <stu-phone>9874123654</stu-phone>
+        <stu-email>Shruti@christuniversity.in</stu-email>
+    </computer-science>
+    <computer-science>
+        <stu-name>Ashwin</stu-name>
+        <stu-university>Christ</stu-university>
+        <stu-phone>6658974582</stu-phone>
+        <stu-email>Ashwin@christuniversity.in</stu-email>
+    </computer-science>
+    <computer-science>
+        <stu-name>Roshini</stu-name>
+        <stu-university>Christ</stu-university>
+        <stu-phone>8374937483</stu-phone>
+        <stu-email>roshini@christuniversity.in</stu-email>
+    </computer-science>
+</christ>
